@@ -67,7 +67,7 @@ este habilitado nos guarda el dato en las cookies
 	nombre en el $scope de tal modo que si es modificada en el $scope se modificara
 	en el sessionStorage
 
-* #### $storage.cookies ####
+* __ $storage.cookies __
 
 > Nos permite acceder a las cookies en caso de no estar activado nos mandara una exception
 
