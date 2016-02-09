@@ -2,7 +2,10 @@ AngularStorage Module
 =====================
 
 ### USO DEL MODULO ###
-Nombre del Modulo y del Servicio
+**Modulo** `ngStorage`
+
+**Servicio** `$storage`
+
 ```javascript
 angular.module('myapp',['ngStorage']).
 controller('ctrlmain', function($scope, $storage){
