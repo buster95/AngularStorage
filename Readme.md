@@ -43,23 +43,23 @@ no este habilitado nos guarda el dato en las cookies
 > Nos permite acceder al SessionStorage del navegador en caso de que no
 este habilitado nos guarda el dato en las cookies
 
-	1. **$storage.session.set('key',value);**
+	1. $storage.session.set('key',value);
 
 	Nos permite guardar una variable en el sessionStorage
 
-	2. **$storage.session.get('key');**
+	2. $storage.session.get('key');
 
 	Nos retorna el valor de una variable por su key
 
-	3. **$storage.session.remove('key');**
+	3. $storage.session.remove('key');
 
 	Nos elimina una variable del sessionStorage por su key
 
-	4. **$storage.session.removeAll();**
+	4. $storage.session.removeAll();
 
 	Nos limpia el sessionStorage eliminando todas las variables
 
-	5. **$storage.bindScope($scope,'key');**
+	5. $storage.bindScope($scope,'key');
 
 	Nos hace un binding de una variable en el sessionStorage con una variable del mismo
 	nombre en el $scope de tal modo que si es modificada en el $scope se modificara
