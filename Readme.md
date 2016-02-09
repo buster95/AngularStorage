@@ -43,7 +43,9 @@ no este habilitado nos guarda el dato en las cookies
 > Nos permite acceder al SessionStorage del navegador en caso de que no
 este habilitado nos guarda el dato en las cookies
 
-	1. ```javascript
+	1.
+
+	```javascript
 	$storage.session.set('key',value);
 	```
 
