@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo Local Storage</title>
+</head>
+<body>
+
+<div ng-controller="ctrlprincipal">
+	<button type="button" ng-click="almacenar()">Almacenar</button>
+	<button type="button" ng-click="unbinding()">UnBind</button>
+	<button type="button" ng-click="clear()">Limpiar</button>
+	<button type="button" ng-click="cambiar()">CambiarSession</button>
+	<br>
+	{{dato}}
+	<br><br>
+	{{usuario}}
+</div>
+
+<script type="text/javascript" src="angular/angular.min.js"></script>
+<script type="text/javascript" src="angular/angular-storage.js"></script>
+<script type="text/javascript">
+	angular.module('myapp', ['ngStorage']).
+	controller('ctrlprincipal', function($scope, $storage){
+
+		$scope.dato = 'vacio';
+
+		$scope.almacenar = function () {
+			$storage.local.set('midato', 2);
+
+			$storage.session.set('usuario','walter2015');
+			$scope.unbinding = $storage.session.bindScope($scope, 'usuario');
+
+			$scope.dato = $storage.local.get('midato');
+		}
+
+		$scope.cambiar = function () {
+			$scope.usuario = 'andrea2015';
+		}
+
+		$scope.clear = function () {
+			$storage.local.removeAll();
+			$storage.session.removeAll();
+			$scope.dato = 'vacio';
+		}
+	})
+</script>
+
+</body>
+</html>

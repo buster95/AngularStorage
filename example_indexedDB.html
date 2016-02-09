@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo IndexedDB</title>
+</head>
+<body>
+
+<button type="button" onclick="creardata()">Crear DB</button>
+<button type="button" onclick="deletedata()">Eliminar DB</button>
+
+
+
+<script type="text/javascript">
+	function creardata () {
+		var conexion = indexedDB.open('mydb', 2);
+		console.log(indexedDB);
+		console.log(conexion);
+
+		conexion.onupgradeneeded = function () {
+			var db = conexion.result;
+			console.log(db);
+
+			var libros = db.createObjectStore("books",{keyPath: "isbn"});
+			var titleIndex = libros.createIndex("by_title", "title", {unique: true});
+			var authorIndex = libros.createIndex("by_author", "author");
+
+			libros.put({title: "Quarry Memories", author: "Fred", isbn: 123456});
+			libros.put({title: "Water Buffaloes", author: "Fred", isbn: 234567});
+			libros.put({title: "Bedrock Nights", author: "Barney", isbn: 345678});
+		}
+
+		conexion.onsuccess = function () {
+			var db = conexion.result;
+			console.log(db);
+		}
+		console.log('creada');
+	}
+
+	function deletedata () {
+		indexedDB.deleteDatabase('mydb');
+		console.log('eliminada');
+	}
+
+
+</script>
+
+</body>
+</html>
