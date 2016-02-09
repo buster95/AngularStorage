@@ -45,7 +45,7 @@ este habilitado nos guarda el dato en las cookies
 
 	1.
 
-	```JavaScript
+	``` JavaScript
 	$storage.session.set('key',value);
 	```
 
