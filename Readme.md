@@ -11,7 +11,7 @@ controller('ctrlmain', function($scope, $storage){
 ```
 
 ### METODOS Y SUBMETODOS ###
-* #### $storage.local
+* $storage.local
 
 > Nos permite acceder al LocalStorage del navegador en caso de que este
 no este habilitado nos guarda el dato en las cookies
@@ -38,7 +38,7 @@ no este habilitado nos guarda el dato en las cookies
 	nombre en el $scope de tal modo que si es modificada en el $scope se modificara
 	en el localStorage
 
-* #### $storage.session
+* $storage.session
 
 > Nos permite acceder al SessionStorage del navegador en caso de que no
 este habilitado nos guarda el dato en las cookies
