@@ -43,11 +43,7 @@ no este habilitado nos guarda el dato en las cookies
 > Nos permite acceder al SessionStorage del navegador en caso de que no
 este habilitado nos guarda el dato en las cookies
 
-	1.
-
-	``` JavaScript
-	$storage.session.set('key',value);
-	```
+	1. $storage.session.set('key',value);
 
 	Nos permite guardar una variable en el sessionStorage
 
